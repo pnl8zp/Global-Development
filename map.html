@@ -2,10 +2,16 @@
 <html>
   <head>
     <style>
+      #left_pane {
+        border: 15px solid orange;
+        top: 0; right: 0; bottom: 0; left: 0;
+        height: calc(100% - 30px); position:absolute; padding:0; margin:0;
+        width: 270px;
+      }
       #map_canvas {
         position: absolute;
         top: 0; right: 0; bottom: 0; left: 0;
-        border: 15px solid orange
+        height:100%; left:300px; right:0px; position:absolute; padding:0; margin:0;
       }
     </style>
     <script src="https://maps.googleapis.com/maps/api/js"></script>
@@ -23,6 +29,7 @@
     </script>
   </head>
   <body>
+    <div id="left_pane"></div>
     <div id="map_canvas"></div>
   </body>
 </html>
