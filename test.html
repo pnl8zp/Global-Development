@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml">
+  <head>
+    <title>ArcGIS JavaScript Extension for the Google Maps API Example</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+
+    <script src="http://maps.google.com/maps?file=api&v=2&key=abcdefg" type="text/javascript"></script>
+    <script src="http://serverapi.arcgisonline.com/jsapi/gmaps/?v=1.6" type="text/javascript" ></script>
+
+    <script type="text/javascript">
+
+    var gmap = null;
+
+    function initialize() {
+      gmap = new GMap2(document.getElementById("gmap"));
+      var centerat = new GLatLng(0, 0);
+
+      gmap.addControl(new GLargeMapControl());
+      gmap.addControl(new GMapTypeControl());
+      gmap.setCenter(centerat, 1);
+
+      var dynamicMap = new esri.arcgis.gmaps.DynamicMapServiceLayer
+        ("http://sampleserver1.arcgisonline.com/ArcGIS/rest/services/Demographics/ESRI_Population_World/MapServer",
+        null, 0.75, dynmapcallback);
+    }
+
+    function dynmapcallback(mapservicelayer) {
+      gmap.addOverlay(mapservicelayer);
+    }
+
+    </script>
+  </head>
+
+  <body onload="initialize();" onunload="GUnload();">
+    <div id="gmap" style="width: 500px; height:500px;"></div>
+  </body>
+
+</html>
