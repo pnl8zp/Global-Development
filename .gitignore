@@ -1,0 +1,10 @@
+# Don't need to push python junk.
+__pycache__/
+*.py[cod]
+
+# Don't need to merge binary files every push.
+*.sqlite3
+
+# Django stuff from Github boilerplate:
+*.log
+*.pot
