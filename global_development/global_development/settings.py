@@ -27,6 +27,13 @@ TEMPLATE_DEBUG = True
 ALLOWED_HOSTS = []
 
 
+# Location of the template directory
+
+TEMPLATE_DIRS = (
+    'global_development/templates',
+)
+
+
 # Application definition
 
 INSTALLED_APPS = (
@@ -36,6 +43,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'location_entity',
 )
 
 MIDDLEWARE_CLASSES = (
