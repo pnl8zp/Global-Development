@@ -1,0 +1,4 @@
+Projects used for this project:
+    Django
+    Bootstrap
+    Font Awesome
