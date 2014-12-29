@@ -5,3 +5,4 @@ TODO:
 ====
 
 - Address open issues
+- Update project wiki
