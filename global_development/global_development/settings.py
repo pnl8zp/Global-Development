@@ -44,6 +44,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'location_entity',
+    'userprofile',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -95,3 +96,5 @@ STATICFILES_DIRS = (
     'Global-Development/global_development/static/',
 
 )
+
+AUTH_PROFILE_MODULE = 'userprofile.UserProfile'
