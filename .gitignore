@@ -11,3 +11,6 @@ __pycache__/
 
 # No need for nonsense
 *~
+
+#PyCharm Stuff
+.idea
