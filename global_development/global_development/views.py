@@ -9,6 +9,10 @@ def signin(request):
     return render_to_response('signin.html')
 
 
+def signup(request):
+    return render_to_response('signup.html')
+
+
 def about(request):
     return render_to_response('welcome_about.html')
 

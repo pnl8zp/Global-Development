@@ -1,11 +1,17 @@
 from django.shortcuts import render_to_response
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse
 from django.core.context_processors import csrf
 from forms import UserProfileForm
 from django.contrib.auth.decorators import login_required
 
+
 @login_required
 def user_profile(request):
+    return HttpResponse("User Profile")
+
+
+@login_required
+def edit_profile(request):
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=request.user.profile)
         if form.is_valid():
