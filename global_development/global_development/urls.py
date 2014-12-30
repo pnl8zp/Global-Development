@@ -8,6 +8,6 @@ urlpatterns = patterns('',
     url(r'^signup/$', 'global_development.views.signup', name='signup'),
     url(r'^about/$', 'global_development.views.about', name='about'),
     url(r'^contact/$', 'global_development.views.contact', name='contact'),
-    url(r'^profile/', include('userprofile.urls')),
+    url(r'^dashboard/', include('userprofile.urls')),
     url(r'^admin/', include(admin.site.urls)),
 )

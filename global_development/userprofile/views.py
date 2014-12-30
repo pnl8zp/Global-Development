@@ -6,9 +6,13 @@ from django.contrib.auth.decorators import login_required
 
 
 @login_required
-def user_profile(request):
-    return render_to_response('dashboard_base.html')
+def dashboard_welcome(request):
+    return render_to_response('dashboard_welcome.html')
 
+
+@login_required
+def profile(request):
+    return render_to_response('profile.html')
 
 @login_required
 def edit_profile(request):
