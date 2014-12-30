@@ -7,7 +7,7 @@ from django.contrib.auth.decorators import login_required
 
 @login_required
 def user_profile(request):
-    return HttpResponse("User Profile")
+    return render_to_response('dashboard_base.html')
 
 
 @login_required
