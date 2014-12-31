@@ -12,7 +12,18 @@ def dashboard_welcome(request):
 
 @login_required
 def profile(request):
-    return render_to_response('profile.html')
+
+    args = {}
+    args['user'] = request.user
+    args['profile'] = request.user.profile
+
+    return render_to_response('profile.html', args)
+
+
+@login_required
+def dashboard_map(request):
+    return render_to_response('dashboard_map.html')
+
 
 @login_required
 def edit_profile(request):
