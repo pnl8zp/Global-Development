@@ -31,7 +31,7 @@ def edit_profile(request):
         form = UserProfileForm(request.POST, instance=request.user.profile)
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect('/profile/')
+            return HttpResponseRedirect('/dashboard/profile/')
     else:
         user = request.user
         profile = user.profile
@@ -42,4 +42,4 @@ def edit_profile(request):
 
     args['form'] = form
 
-    return render_to_response('profile.html', args)
+    return render_to_response('profile_form.html', args)
