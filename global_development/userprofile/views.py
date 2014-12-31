@@ -11,6 +11,16 @@ def dashboard_welcome(request):
 
 
 @login_required
+def dashboard_overview(request):
+    return render_to_response('dashboard_overview.html')
+
+
+@login_required
+def dashboard_resources(request):
+    return render_to_response('dashboard_resources.html')
+
+
+@login_required
 def profile(request):
 
     args = {}
