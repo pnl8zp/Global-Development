@@ -7,4 +7,5 @@ urlpatterns = patterns('',
         url(r'^profile/edit/$', 'userprofile.views.edit_profile', name='edit_profile'),
         url(r'^map/$', 'userprofile.views.dashboard_map', name='map'),
         url(r'^resources/$', 'userprofile.views.dashboard_resources'),
+        url(r'^help/$', 'userprofile.views.help_home'),
 )

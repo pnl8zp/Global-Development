@@ -36,6 +36,11 @@ def dashboard_map(request):
 
 
 @login_required
+def help_home(request):
+    return render_to_response('help_home.html')
+
+
+@login_required
 def edit_profile(request):
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=request.user.profile)
