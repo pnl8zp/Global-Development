@@ -10,6 +10,7 @@ urlpatterns = patterns('',
     url(r'^about/$', 'global_development.views.about', name='about'),
     url(r'^contact/$', 'global_development.views.contact', name='contact'),
     url(r'^dashboard/', include('userprofile.urls')),
+    url(r'^help/$', 'userprofile.views.help_home', name='help'),
     url(r'^admin/', include(admin.site.urls)),
 
 )
