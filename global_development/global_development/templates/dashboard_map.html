@@ -26,8 +26,20 @@
             select: 'geometry',
             from: '1N2LBk4JHwWpOY4d9fobIn27lfnZ5MDy-NoqqRpk'
           },
-          map: map,
-          suppressInfoWindows: true
+          map: map
+        }); //s
+
+        google.maps.event.addListener(world_geometry, 'click', function(e) {
+
+            // Change the content of the InfoWindow
+            e.infoWindowHtml = e.row['Name'].value + "<br>";
+
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "http://api.worldbank.org/countries/US", false);
+            xhr.send();
+
+            var xmlDocument = xhr.responseXML;
+
         });
       }
       google.maps.event.addDomListener(window, 'load', initialize);
