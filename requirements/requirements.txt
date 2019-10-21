@@ -1,7 +1,7 @@
 # I should have used virtualenv
 # I've learned my lesson
 
-Django==1.7.1
+Django==1.11.23
 Genshi==0.7
 Markdown==2.5.2
 Markups==0.5.2
