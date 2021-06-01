@@ -78,7 +78,7 @@ system-service==0.1.6
 unity-lens-photos==1.0
 uritemplate==0.6
 urlgrabber==3.9.1
-urllib3==1.7.1
+urllib3==1.26.5
 virtualenv==1.11.4
 waliki==0.3.3
 wiki==0.0.23
